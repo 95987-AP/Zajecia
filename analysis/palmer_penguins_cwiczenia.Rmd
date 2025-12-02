@@ -1,0 +1,127 @@
+---
+title: "Palmer Penguins"
+author: 
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r, out.width = "25%", fig.align ='right'}
+knitr::include_graphics("data/pingwiny.png")
+```
+
+```{r, out.width = "25%", fig.align ='center'}
+knitr::include_graphics("data/dziub.png")
+```
+
+## Załadowanie danych
+
+Najpierw musimy załadować pakiet, który zawiera interesujące nas dane i dowiedzieć się, co te dane przedstawiają.
+
+```{r, eval=FALSE}
+install.packages("palmerpenguins")
+```
+
+
+
+Ładujemy pakiet do pamięci R za pomocą polecenia `library()`:
+
+```{r}
+library(palmerpenguins)
+data(penguins)
+?penguins
+```
+
+
+## Informacje wstępne
+Używając pakietu 'dplyr', określmy teraz, ile jest pingwinów dla każdego gatunku i dla każdej lokalizacji:
+
+```{r}
+library(kableExtra)
+library(dplyr)
+library(pander)
+data_species <- penguins %>%
+  count(species) 
+# jest mniej więcej równoważne poleceniu penguins %>% group_by(species) %>% summarise(n = n())
+ 
+data_species
+kable(data_species)  %>% 
+  kable_paper(c("striped", "hover"), full_width = F)
+```
+
+Wszystkie możliwości prezentacji danych w formie tabeli można znaleźć na stronie: [kableEXtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+
+Liczba pingwinów na wyspie:
+  
+```{r}
+
+```
+
+Teraz znajdźmy średnią masę ciała pingwinów:
+```{r}
+
+```
+
+Następnie znajdźmy średnią masy ciała w podziale na grupy (gatunki). Użyjemy funkcji 'group_by':
+
+```{r}
+
+```
+
+Co jeśli chcemy wyfiltrować tylko te pingwiny, które mają masę ciała mniejszą od średniej ich gatunku? 
+
+```{r}
+
+```
+
+Dalej, jeśli chcemy ułożyć pingwiny, które mają mniejszą masę ciała niż średnia ich gatunku, w określonej kolejności (użyjemy funkcji 'arrange' z funkcją 'desc'):
+
+```{r}
+
+```
+
+## Podstawowe wykresy
+Przejdźmy do wizualizacji naszych danych za pomocą biblioteki 'ggplot2'. 
+Jak poprzednio, najpierw instalujemy pakiet w systemie (przypomnienie: jest to jednorazowy krok), a następnie ładujemy pakiet do środowiska.
+
+```{r}
+library(ggplot2)
+```
+
+Na początek stworzymy podstawowy wykres rozrzutu przedstawiający zmienność masy ciała w odniesieniu do długości płetwy pingwina:
+
+```{r}
+
+```
+
+Następnie narysujemy wykres liniowy przedstawiający zmienność masy ciała w odniesieniu do długości płetwy pingwina:
+```{r}
+
+```
+
+Dalej, stworzymy wykres słupkowy i histogram. Na wykresie słupkowym każdy punkt danych jest reprezentowany przez słupek, którego długość jest proporcjonalna do reprezentowanej wartości.
+Podobnie jak na wykresie słupkowym, histogram przedstawia słupki, ale dla punktów danych pogrupowanych w zakresy. Zakresy są ciągłymi przedziałami liczb.
+Wykres słupkowy i histogram przedstawiają liczbę pingwinów o danej masie ciała: 
+
+```{r}
+# Histogram masy ciała
+
+
+# Wykres słupkowy gatunków
+
+```
+
+## Bardziej interesujące wykresy...
+Aby dodać odrobinę koloru, włączamy parametr koloru w nawiasach estetyki, gdzie punkty są podświetlane w zależności od gatunku pingwinów:
+
+```{r}
+
+```
+
+Podobnie możemy zmienić rozmiar punktów na podstawie poziomów kolumny czynnikowej. Jeśli chcemy pójść jeszcze dalej, możemy zmienić kształt punktu na podstawie poziomów kolumny czynnikowej:
+```{r}
+
+```
