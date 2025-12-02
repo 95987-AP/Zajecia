@@ -527,15 +527,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree6821b256fdd5ef02ac6fc2e3a742ff70e0220ba8targetblank6821b25a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree5293d8ac4530ba2b7abe098e385a4063f4cdbcb7targetblank5293d8aa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/95987-AP/Zajecia/tree/6821b256fdd5ef02ac6fc2e3a742ff70e0220ba8" target="_blank">6821b25</a>
+<a href="https://github.com/95987-AP/Zajecia/tree/5293d8ac4530ba2b7abe098e385a4063f4cdbcb7" target="_blank">5293d8a</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree6821b256fdd5ef02ac6fc2e3a742ff70e0220ba8targetblank6821b25a"
+id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree5293d8ac4530ba2b7abe098e385a4063f4cdbcb7targetblank5293d8aa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -545,7 +545,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/95987-AP/Zajecia/tree/6821b256fdd5ef02ac6fc2e3a742ff70e0220ba8" target="_blank">6821b25</a>.
+<a href="https://github.com/95987-AP/Zajecia/tree/5293d8ac4530ba2b7abe098e385a4063f4cdbcb7" target="_blank">5293d8a</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -616,6 +616,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/95987-AP/Zajecia/blob/5293d8ac4530ba2b7abe098e385a4063f4cdbcb7/analysis/palmer_penguins_cwiczenia.Rmd" target="_blank">5293d8a</a>
+</td>
+<td>
+95987-AP
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Dodanie nowych analiz
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/95987-AP/Zajecia/1b37a944d79f36d0a615e3af9f9a2e341ae20539/docs/palmer_penguins_cwiczenia.html" target="_blank">1b37a94</a>
+</td>
+<td>
+95987-AP
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -963,14 +997,14 @@ Dodanie nowych analiz
 </div>
 </div>
 </div>
-<pre class="r"><code>knitr::include_graphics(&quot;~/pingwiny.png&quot;, error = FALSE)</code></pre>
-<img src="../../../../../pingwiny.png" width="25%" style="display: block; margin: auto 0 auto auto;" />
+<pre class="r"><code>knitr::include_graphics(&quot;data/pingwiny.png&quot;, error = FALSE)</code></pre>
+<img src="data/pingwiny.png" width="25%" style="display: block; margin: auto 0 auto auto;" />
 <div class="alert alert-warning">
 <strong>Warning!</strong> The custom <code>fig.path</code> you set was
 ignored by workflowr.
 </div>
-<pre class="r"><code>knitr::include_graphics(&quot;~/dziub.png&quot;,error = FALSE)</code></pre>
-<img src="../../../../../dziub.png" width="25%" style="display: block; margin: auto;" />
+<pre class="r"><code>knitr::include_graphics(&quot;data/dziub.png&quot;,error = FALSE)</code></pre>
+<img src="data/dziub.png" width="25%" style="display: block; margin: auto;" />
 <div class="alert alert-warning">
 <strong>Warning!</strong> The custom <code>fig.path</code> you set was
 ignored by workflowr.
@@ -1048,11 +1082,96 @@ Gentoo
 na stronie: <a
 href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">kableEXtra</a></p>
 <p>Liczba pingwinów na wyspie:</p>
+<pre class="r"><code>penguins %&gt;%
+  count(island) %&gt;%
+  kable(col.names = c(&#39;Wyspa&#39;, &#39;Liczba&#39;)) %&gt;%
+  kable_paper(full_width = FALSE)</code></pre>
+<table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Wyspa
+</th>
+<th style="text-align:right;">
+Liczba
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Biscoe
+</td>
+<td style="text-align:right;">
+168
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dream
+</td>
+<td style="text-align:right;">
+124
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Torgersen
+</td>
+<td style="text-align:right;">
+52
+</td>
+</tr>
+</tbody>
+</table>
 <p>Teraz znajdźmy średnią masę ciała pingwinów:</p>
+<pre class="r"><code>penguins %&gt;%
+  summarise(średnia_masa = round(mean(body_mass_g, na.rm = TRUE), 1)) %&gt;%
+  kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">średnia_masa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">4201.8</td>
+</tr>
+</tbody>
+</table>
 <p>Następnie znajdźmy średnią masy ciała w podziale na grupy (gatunki).
 Użyjemy funkcji ‘group_by’:</p>
+<pre class="r"><code>penguins %&gt;%
+  group_by(species) %&gt;%
+  summarise(średnia_masa = round(mean(body_mass_g, na.rm = TRUE), 1)) %&gt;%
+  kable(col.names = c(&#39;Gatunek&#39;, &#39;Średnia masa (g)&#39;))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Gatunek</th>
+<th align="right">Średnia masa (g)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Adelie</td>
+<td align="right">3700.7</td>
+</tr>
+<tr class="even">
+<td align="left">Chinstrap</td>
+<td align="right">3733.1</td>
+</tr>
+<tr class="odd">
+<td align="left">Gentoo</td>
+<td align="right">5076.0</td>
+</tr>
+</tbody>
+</table>
 <p>Co jeśli chcemy wyfiltrować tylko te pingwiny, które mają masę ciała
 mniejszą od średniej ich gatunku?</p>
+<p>penguins %&gt;% group_by(species) %&gt;% filter(body_mass_g &lt;
+mean(body_mass_g, na.rm = TRUE)) %&gt;%</p>
 <p>Dalej, jeśli chcemy ułożyć pingwiny, które mają mniejszą masę ciała
 niż średnia ich gatunku, w określonej kolejności (użyjemy funkcji
 ‘arrange’ z funkcją ‘desc’):</p>
@@ -1076,9 +1195,41 @@ pogrupowanych w zakresy. Zakresy są ciągłymi przedziałami liczb. Wykres
 słupkowy i histogram przedstawiają liczbę pingwinów o danej masie
 ciała:</p>
 <pre class="r"><code># Histogram masy ciała
-
-
-# Wykres słupkowy gatunków</code></pre>
+# Histogram masy ciała
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram(bins = 30, fill = &quot;steelblue&quot;, color = &quot;black&quot;, alpha = 0.7) +
+  labs(
+    title = &quot;Histogram masy ciała pingwinów&quot;,
+    x = &quot;Masa ciała (g)&quot;,
+    y = &quot;Liczba pingwinów&quot;
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;))</code></pre>
+<img src="figure/palmer_penguins_cwiczenia.Rmd/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" />
+<div class="alert alert-warning">
+<strong>Warning!</strong> The custom <code>fig.path</code> you set was
+ignored by workflowr.
+</div>
+<pre class="r"><code># Wykres słupkowy gatunków
+# Wykres słupkowy gatunków
+penguins %&gt;%
+  group_by(species) %&gt;%
+  summarise(count = n(), .groups = &#39;drop&#39;) %&gt;%
+  ggplot(aes(x = species, y = count, fill = species)) +
+  geom_col(color = &quot;black&quot;, alpha = 0.8) +
+  labs(
+    title = &quot;Wykres słupkowy gatunków pingwinów&quot;,
+    x = &quot;Gatunek&quot;,
+    y = &quot;Liczba pingwinów&quot;
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = &quot;bold&quot;),
+        legend.position = &quot;none&quot;)</code></pre>
+<img src="figure/palmer_penguins_cwiczenia.Rmd/unnamed-chunk-13-2.png" width="672" style="display: block; margin: auto;" />
+<div class="alert alert-warning">
+<strong>Warning!</strong> The custom <code>fig.path</code> you set was
+ignored by workflowr.
+</div>
 </div>
 <div id="bardziej-interesujące-wykresy" class="section level2">
 <h2>Bardziej interesujące wykresy…</h2>
@@ -1132,8 +1283,9 @@ loaded via a namespace (and not attached):
 [37] pkgconfig_2.0.3    callr_3.7.6        gtable_0.3.6       pillar_1.9.0      
 [41] bslib_0.9.0        later_1.4.4        glue_1.8.0         Rcpp_1.0.13-1     
 [45] systemfonts_1.3.1  xfun_0.53          tibble_3.2.1       tidyselect_1.2.1  
-[49] rstudioapi_0.17.1  farver_2.1.2       htmltools_0.5.8.1  rmarkdown_2.30    
-[53] svglite_2.2.2      compiler_4.4.2     S7_0.2.0           getPass_0.2-4     </code></pre>
+[49] rstudioapi_0.17.1  farver_2.1.2       htmltools_0.5.8.1  labeling_0.4.3    
+[53] rmarkdown_2.30     svglite_2.2.2      compiler_4.4.2     S7_0.2.0          
+[57] getPass_0.2-4     </code></pre>
 </div>
 </div>
 </div>
