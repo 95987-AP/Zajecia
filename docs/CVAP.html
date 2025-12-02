@@ -12,7 +12,7 @@
 
 <meta name="date" content="2025-12-02" />
 
-<title>CV - Aleksander Pietrzak</title>
+<title>CV - AleksanderP</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -362,7 +362,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">CV - Aleksander Pietrzak</h1>
+<h1 class="title toc-ignore">CV - AleksanderP</h1>
 <h4 class="date">2025-12-02</h4>
 
 </div>
@@ -371,7 +371,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -382,8 +382,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -396,9 +396,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Zajecia/</code> <span
@@ -421,18 +421,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -523,15 +526,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatreea12a44e053e67ba5c5a4c9902bad618fe1a4b558targetblanka12a44ea">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree30607e327554217d3be8e9cc1aa4775ac5f7c092targetblank30607e3a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/95987-AP/Zajecia/tree/a12a44e053e67ba5c5a4c9902bad618fe1a4b558" target="_blank">a12a44e</a>
+<a href="https://github.com/95987-AP/Zajecia/tree/30607e327554217d3be8e9cc1aa4775ac5f7c092" target="_blank">30607e3</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatreea12a44e053e67ba5c5a4c9902bad618fe1a4b558targetblanka12a44ea"
+id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree30607e327554217d3be8e9cc1aa4775ac5f7c092targetblank30607e3a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -541,7 +544,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/95987-AP/Zajecia/tree/a12a44e053e67ba5c5a4c9902bad618fe1a4b558" target="_blank">a12a44e</a>.
+<a href="https://github.com/95987-AP/Zajecia/tree/30607e327554217d3be8e9cc1aa4775ac5f7c092" target="_blank">30607e3</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -565,6 +568,7 @@ Untracked files:
     Untracked:  AP_2-12_github.R
 
 Unstaged changes:
+    Modified:   analysis/CVAP.Rmd
     Modified:   analysis/_site.yml
     Deleted:    analysis/about.Rmd
 
@@ -610,6 +614,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/95987-AP/Zajecia/30607e327554217d3be8e9cc1aa4775ac5f7c092/docs/CVAP.html" target="_blank">30607e3</a>
+</td>
+<td>
+95987-AP
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -719,144 +740,112 @@ Dodanie nowych analiz
 </div>
 </div>
 </div>
-<p>//<img src="data/cv-avatar.jpg"
-style="border-radius:50%;;width:20.0%" fig.align="right"
-alt="Holograficzne foto" /></p>
-<div id="kontakt" class="section level1">
-<h1>Kontakt</h1>
+<div class="float">
+<img src="data/kot-cv.jpg" style="width:25.0%" fig.align="right"
+alt="Selfie z kotem" />
+<div class="figcaption">Selfie z kotem</div>
+</div>
+<div id="kontakt-nie-dzwoń-po-22" class="section level1">
+<h1>Kontakt (nie dzwoń po 22)</h1>
 <ul>
-<li><strong>Email</strong>: <a href="mailto:quantum@zoltar.ai"
-class="email">quantum@zoltar.ai</a></li>
-<li><strong>LinkedIn</strong>: <a
-href="https://linkedin.com/in/zoltar-quantum">linkedin.com/in/zoltar-quantum</a></li>
-<li><strong>GitHub</strong>: <a
-href="https://github.com/ZoltarPrime"><span
-class="citation">@ZoltarPrime</span></a></li>
-<li><strong>Tel</strong>: +1-666-DEV-1337</li>
-<li><strong>Lokalizacja</strong>: Mars Colony, Earth Orbit</li>
+<li>Email: <a href="mailto:piotr.niepracuje@gmail.com"
+class="email">piotr.niepracuje@gmail.com</a></li>
+<li>Tel: 666-666-666 (numer z horroru)</li>
+<li>LinkedIn: “Leniwy Geniusz”</li>
+<li>Miasto: Kanapa, Polska</li>
 </ul>
 </div>
-<div id="podsumowanie" class="section level1">
-<h1>Podsumowanie</h1>
-<p>Geniusz kodujący od urodzenia (pierwszy commit w brzuchu matki).
-Wynalazca języka ZoltarScript (szybszy niż light speed compilation).
-Budowniczy pierwszej AI kwantowej do mining BTC z 100% profit (zakazany
-przez NASA). Zwycięzca Hackathonu Wszechświata 2025 (proj: teleportacja
-via Flutter). Zero bugów w legacy code—matematyka czysta.</p>
+<div id="o-mnie-krótko" class="section level1">
+<h1>O mnie (krótko)</h1>
+<p>22-letni masterchef kanapek i król netflixa. Poszukuję pracy gdzie
+mogę spać i jeść za darmo. Umiejętność: przetrwanie na ramen 1 rok.
+Hobby: scrollowanie TikToka 24/7.</p>
 </div>
-<div id="wykształcenie" class="section level1">
-<h1>Wykształcenie</h1>
+<div id="wykształcenie-teoretyczne" class="section level1">
+<h1>Wykształcenie (teoretyczne)</h1>
 <table>
 <colgroup>
+<col width="29%" />
 <col width="18%" />
-<col width="31%" />
-<col width="15%" />
-<col width="34%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Tytuł</th>
-<th>Instytucja</th>
-<th>Lata</th>
-<th>Osiągnięcia</th>
+<th>Szkoła</th>
+<th>Rok</th>
+<th>Ocena</th>
+<th>Uwaga</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>PhD Quantum Computing</td>
-<td>MIT + CERN Fusion Lab</td>
-<td>2022-2024 (2 lata!)</td>
-<td>Teza: “Kod nieskończonej prędkości” - Nobel Physics 2025</td>
+<td>Uniwersytet Kanapki</td>
+<td>2020-2025</td>
+<td>2.0/5.0</td>
+<td>Specjalizacja: Majonez kwantowy</td>
 </tr>
 <tr class="even">
-<td>MSc AI Godmode</td>
-<td>Harvard Underwater Campus</td>
-<td>2020-2022</td>
-<td>GPA 6.0/5.0, wynalazek self-learning GPU</td>
-</tr>
-<tr class="odd">
-<td>BSc Dev Sorcery</td>
-<td>Hogwarts IT Academy</td>
-<td>2018-2020</td>
-<td>Sortowany do Slytherin za dark patterns</td>
+<td>Liceum Śpiochów</td>
+<td>2017-2020</td>
+<td>“zal”</td>
+<td>Klasa z łóżkami zamiast ławek</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="doświadczenie" class="section level1">
-<h1>Doświadczenie</h1>
+<div id="doświadczenie-z-życia" class="section level1">
+<h1>Doświadczenie (z życia)</h1>
 <ul>
-<li><strong>CTO @ ZoltarAI Corp (unicorn valuation ∞)</strong>
-(2024-dziś)
+<li><strong>Król Lodówki</strong> (dom, 2020-dziś)
 <ul>
-<li>Zaprojektowałem AGI co koduje 1M LOC/dzień bez kawy.</li>
-<li>Zintegrowałem blockchain z wormhole travel (testy na Marsie).</li>
+<li>Zarządzanie zapasami sera (0 strat).</li>
+<li>Optymalizacja route pizza delivery (5min pieszo).</li>
 </ul></li>
-<li><strong>Lead Quantum Dev @ SpaceX Neuralink</strong> (2022-2024)
+<li><strong>Tester Guinessa</strong> (2023, 1 dzień)
 <ul>
-<li>Firmware do Starship autopilot (0 kolizji w symulacjach
-multiwszechświat).</li>
-<li>React app dla kontroli myśli Elona (0 lag).</li>
+<li>Światowy rekord w jedzeniu chipsów (10kg).</li>
+<li>Nagroda: brzuch boli.</li>
 </ul></li>
-<li><strong>Hackathon Dominator @ Google/Apple/Microsoft</strong>
-(2018-2022)
+<li><strong>Asystent Kota</strong> (od zawsze)
 <ul>
-<li>500+ wygranych, nagrody &gt;1B USD (wydane na Lambo fleet).</li>
+<li>Czyszczenie kuwety, głaskanie 8h/dzień.</li>
 </ul></li>
 </ul>
 </div>
-<div id="umiejętności" class="section level1">
-<h1>Umiejętności</h1>
-<div id="języki-frameworks-poziom-beyond-god" class="section level2">
-<h2>Języki / Frameworks (poziom: Beyond God)</h2>
+<div id="umiejętności-superbohater-level" class="section level1">
+<h1>Umiejętności (superbohater level)</h1>
 <ul>
-<li>ZoltarScript, Rust++ (własny fork), Python ∞, JS Quantum</li>
-<li>Flutter Teleport, React Holo, Spring Eternal</li>
+<li><strong>Kulinarne</strong>: Kanapka 360° (obraca się sama)</li>
+<li><strong>Sport</strong>: Bieg po piwo (rekord 2m/s)</li>
+<li><strong>Języki</strong>: Polski (native), Miau (C1), Emoji
+(fluent)</li>
+<li><strong>Soft</strong>: Unikanie pracy (expert), spanie stojąc</li>
 </ul>
 </div>
-<div id="narzędzia-cloud" class="section level2">
-<h2>Narzędzia / Cloud</h2>
+<div id="projekty-dzieła-sztuki" class="section level1">
+<h1>Projekty (dzieła sztuki)</h1>
 <ul>
-<li>VSCode TimeMachine (undo do Big Bang), Git Multiverse</li>
-<li>AWS Galaxy, Azure BlackHole, Kubernetes Armada</li>
+<li><strong>Wielka Kanapka</strong>: Wys. 2m, smak 11/10. <a
+href="data/kanapka.jpg">Zdjęcie</a></li>
+<li><strong>Seria Netflixa</strong>: Obejrzałem 1000 sezonów bez
+mrugania.</li>
+<li><strong>Fortepian Kota</strong>: App co gra mruczenie (1 user:
+kot).</li>
 </ul>
 </div>
-<div id="soft-other" class="section level2">
-<h2>Soft / Other</h2>
+<div id="hobby-pasje-życia" class="section level1">
+<h1>Hobby (pasje życia)</h1>
 <ul>
-<li>Telepatia z kodem, bug exorcism, 12D chess planning</li>
-<li>Języki: 69 (w tym Binary native, Klingon C2)</li>
+<li>Kolekcjonowanie paragonów z Biedry.</li>
+<li>Konkursy “kto dłużej nie sprzątnie pokoju”.</li>
+<li>Gotowanie: woda + makaron = gourmet.</li>
 </ul>
 </div>
-</div>
-<div id="projekty-flagowe" class="section level1">
-<h1>Projekty Flagowe</h1>
-<ul>
-<li><strong>ZoltarNet</strong>: Sieć neuronowa predykująca koniec świata
-(99.999% accuracy).<a
-href="https://github.com/ZoltarPrime/zoltarnet">GitHub</a></li>
-<li><strong>TeleportApp</strong>: Flutter do quantum jump (beta z
-Marsem).<a href="https://fake.app/teleport">AppStore</a></li>
-<li><strong>BugZero</strong>: AI co fixuje legacy COBOL w 0.001s.<a
-href="https://zoltar.ai/bugzero">Demo</a></li>
-</ul>
-</div>
-<div id="nagrody-certy" class="section level1">
-<h1>Nagrody / Certy</h1>
-<ul>
-<li>Nobel Physics 2025 (Quantum Code)</li>
-<li>Turing Award x3 (2020-2024)</li>
-<li>Olympic Gold Coding Marathon (100km/h typing)</li>
-</ul>
-</div>
-<div id="hobby" class="section level1">
-<h1>Hobby</h1>
-<ul>
-<li>Surfing black holes, chess vs AI (win rate 100%), cooking fusion
-reactors.</li>
-</ul>
-<p><em>CV v1.0 ∞ - Źródło Rmd na GitHub. Oferty &gt;1T USD only. No
-recruiters pls.</em>[web:77]</p>
+<div id="referencje" class="section level1">
+<h1>Referencje</h1>
+<p>” Najlepszy leniuch ever!” - Kot Mruczek<br />
+“Dobry chłopak, ale śpi za dużo” - Mama</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">

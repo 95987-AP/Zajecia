@@ -1,5 +1,5 @@
 ---
-title: "CV - Aleksander Pietrzak"
+title: "CV - AleksanderP"
 output:
   workflowr::wflow_html:
     toc: true
@@ -8,60 +8,55 @@ output:
 date: "`r Sys.Date()`"
 ---
 
-//![Holograficzne foto](data/cv-avatar.jpg){width=20% fig.align="right" style="border-radius:50%;"}
 
-# Kontakt
-- **Email**: quantum@zoltar.ai
-- **LinkedIn**: [linkedin.com/in/zoltar-quantum](https://linkedin.com/in/zoltar-quantum)
-- **GitHub**: [@ZoltarPrime](https://github.com/ZoltarPrime)
-- **Tel**: +1-666-DEV-1337
-- **Lokalizacja**: Mars Colony, Earth Orbit
 
-# Podsumowanie
-Geniusz kodujący od urodzenia (pierwszy commit w brzuchu matki). Wynalazca języka ZoltarScript (szybszy niż light speed compilation). Budowniczy pierwszej AI kwantowej do mining BTC z 100% profit (zakazany przez NASA). Zwycięzca Hackathonu Wszechświata 2025 (proj: teleportacja via Flutter). Zero bugów w legacy code—matematyka czysta.
 
-# Wykształcenie
-| Tytuł | Instytucja | Lata | Osiągnięcia |
-|-------|------------|------|-------------|
-| PhD Quantum Computing | MIT + CERN Fusion Lab | 2022-2024 (2 lata!) | Teza: "Kod nieskończonej prędkości" - Nobel Physics 2025 |
-| MSc AI Godmode | Harvard Underwater Campus | 2020-2022 | GPA 6.0/5.0, wynalazek self-learning GPU |
-| BSc Dev Sorcery | Hogwarts IT Academy | 2018-2020 | Sortowany do Slytherin za dark patterns |
+![Selfie z kotem](data/kot-cv.jpg){width=25% fig.align="right"}
 
-# Doświadczenie
-- **CTO @ ZoltarAI Corp (unicorn valuation ∞)** (2024-dziś)
-  - Zaprojektowałem AGI co koduje 1M LOC/dzień bez kawy.
-  - Zintegrowałem blockchain z wormhole travel (testy na Marsie).
-- **Lead Quantum Dev @ SpaceX Neuralink** (2022-2024)
-  - Firmware do Starship autopilot (0 kolizji w symulacjach multiwszechświat).
-  - React app dla kontroli myśli Elona (0 lag).
-- **Hackathon Dominator @ Google/Apple/Microsoft** (2018-2022)
-  - 500+ wygranych, nagrody >1B USD (wydane na Lambo fleet).
+# Kontakt (nie dzwoń po 22)
+- Email: piotr.niepracuje@gmail.com
+- Tel: 666-666-666 (numer z horroru)
+- LinkedIn: "Leniwy Geniusz"
+- Miasto: Kanapa, Polska
 
-# Umiejętności
-## Języki / Frameworks (poziom: Beyond God)
-- ZoltarScript, Rust++ (własny fork), Python ∞, JS Quantum
-- Flutter Teleport, React Holo, Spring Eternal
+# O mnie (krótko)
+22-letni masterchef kanapek i król netflixa. Poszukuję pracy gdzie mogę spać i jeść za darmo. Umiejętność: przetrwanie na ramen 1 rok. Hobby: scrollowanie TikToka 24/7.
 
-## Narzędzia / Cloud
-- VSCode TimeMachine (undo do Big Bang), Git Multiverse
-- AWS Galaxy, Azure BlackHole, Kubernetes Armada
+# Wykształcenie (teoretyczne)
+| Szkoła | Rok | Ocena | Uwaga |
+|--------|-----|-------|-------|
+| Uniwersytet Kanapki | 2020-2025 | 2.0/5.0 | Specjalizacja: Majonez kwantowy |
+| Liceum Śpiochów | 2017-2020 | "zal" | Klasa z łóżkami zamiast ławek |
 
-## Soft / Other
-- Telepatia z kodem, bug exorcism, 12D chess planning
-- Języki: 69 (w tym Binary native, Klingon C2)
+# Doświadczenie (z życia)
+- **Król Lodówki** (dom, 2020-dziś)
+  - Zarządzanie zapasami sera (0 strat).
+  - Optymalizacja route pizza delivery (5min pieszo).
+- **Tester Guinessa** (2023, 1 dzień)
+  - Światowy rekord w jedzeniu chipsów (10kg).
+  - Nagroda: brzuch boli.
+- **Asystent Kota** (od zawsze)
+  - Czyszczenie kuwety, głaskanie 8h/dzień.
 
-# Projekty Flagowe
-- **ZoltarNet**: Sieć neuronowa predykująca koniec świata (99.999% accuracy).[GitHub](https://github.com/ZoltarPrime/zoltarnet)
-- **TeleportApp**: Flutter do quantum jump (beta z Marsem).[AppStore](https://fake.app/teleport)
-- **BugZero**: AI co fixuje legacy COBOL w 0.001s.[Demo](https://zoltar.ai/bugzero)
+# Umiejętności (superbohater level)
+- **Kulinarne**: Kanapka 360° (obraca się sama)
+- **Sport**: Bieg po piwo (rekord 2m/s)
+- **Języki**: Polski (native), Miau (C1), Emoji (fluent)
+- **Soft**: Unikanie pracy (expert), spanie stojąc
 
-# Nagrody / Certy
-- Nobel Physics 2025 (Quantum Code)
-- Turing Award x3 (2020-2024)
-- Olympic Gold Coding Marathon (100km/h typing)
+# Projekty (dzieła sztuki)
+- **Wielka Kanapka**: Wys. 2m, smak 11/10. [Zdjęcie](data/kanapka.jpg)
+- **Seria Netflixa**: Obejrzałem 1000 sezonów bez mrugania.
+- **Fortepian Kota**: App co gra mruczenie (1 user: kot).
 
-# Hobby
-- Surfing black holes, chess vs AI (win rate 100%), cooking fusion reactors.
+# Hobby (pasje życia)
+- Kolekcjonowanie paragonów z Biedry.
+- Konkursy "kto dłużej nie sprzątnie pokoju".
+- Gotowanie: woda + makaron = gourmet.
 
-*CV v1.0 ∞ - Źródło Rmd na GitHub. Oferty >1T USD only. No recruiters pls.*[web:77]
+# Referencje
+" Najlepszy leniuch ever!" - Kot Mruczek  
+"Dobry chłopak, ale śpi za dużo" - Mama  
+
+
 
