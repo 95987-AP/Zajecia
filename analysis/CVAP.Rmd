@@ -14,7 +14,7 @@ date: "`r Sys.Date()`"
 ![Selfie z kotem](data/kot-cv.jpg){width=25% fig.align="right"}
 
 # Kontakt (nie dzwoń po 22)
-- Email: piotr.niepracuje@gmail.com
+- Email: aleksander.niepracuje@gmail.com
 - Tel: 666-666-666 (numer z horroru)
 - LinkedIn: "Leniwy Geniusz"
 - Miasto: Kanapa, Polska
@@ -45,7 +45,7 @@ date: "`r Sys.Date()`"
 - **Soft**: Unikanie pracy (expert), spanie stojąc
 
 # Projekty (dzieła sztuki)
-- **Wielka Kanapka**: Wys. 2m, smak 11/10. [Zdjęcie](data/kanapka.jpg)
+- **Wielka Kanapka**: Wys. 2m, smak 11/10.
 - **Seria Netflixa**: Obejrzałem 1000 sezonów bez mrugania.
 - **Fortepian Kota**: App co gra mruczenie (1 user: kot).
 
