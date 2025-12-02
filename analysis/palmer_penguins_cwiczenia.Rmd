@@ -15,11 +15,11 @@ library(kableExtra)
 ```
 
 ```{r, out.width = "25%", fig.align ='right'}
-knitr::include_graphics("data/pingwiny.png", error = FALSE)
+knitr::include_graphics("/pingwiny.png", error = FALSE)
 ```
 
 ```{r, out.width = "25%", fig.align ='center'}
-knitr::include_graphics("data/dziub.png",error = FALSE)
+knitr::include_graphics("/dziub.png",error = FALSE)
 ```
 
 ## Załadowanie danych
