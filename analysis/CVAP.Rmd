@@ -8,11 +8,6 @@ output:
 date: "`r Sys.Date()`"
 ---
 
-
-
-
-![Selfie z kotem](data/kot-cv.jpg){width=25% fig.align="right"}
-
 # Kontakt (nie dzwoń po 22)
 - Email: aleksander.niepracuje@gmail.com
 - Tel: 666-666-666 (numer z horroru)

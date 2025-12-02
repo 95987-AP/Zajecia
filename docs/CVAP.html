@@ -371,7 +371,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -382,8 +382,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -396,9 +396,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Zajecia/</code> <span
@@ -421,18 +421,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -523,15 +526,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree1f7b042e14d9ec1c792dfb3a9c1ffbd1ec773fabtargetblank1f7b042a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatreefb296d62fc01fa075388462fd413125d111c7852targetblankfb296d6a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/95987-AP/Zajecia/tree/1f7b042e14d9ec1c792dfb3a9c1ffbd1ec773fab" target="_blank">1f7b042</a>
+<a href="https://github.com/95987-AP/Zajecia/tree/fb296d62fc01fa075388462fd413125d111c7852" target="_blank">fb296d6</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree1f7b042e14d9ec1c792dfb3a9c1ffbd1ec773fabtargetblank1f7b042a"
+id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatreefb296d62fc01fa075388462fd413125d111c7852targetblankfb296d6a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -541,7 +544,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/95987-AP/Zajecia/tree/1f7b042e14d9ec1c792dfb3a9c1ffbd1ec773fab" target="_blank">1f7b042</a>.
+<a href="https://github.com/95987-AP/Zajecia/tree/fb296d62fc01fa075388462fd413125d111c7852" target="_blank">fb296d6</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -565,6 +568,7 @@ Untracked files:
     Untracked:  AP_2-12_github.R
 
 Unstaged changes:
+    Modified:   analysis/CVAP.Rmd
     Modified:   analysis/_site.yml
     Deleted:    analysis/about.Rmd
 
@@ -610,6 +614,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/95987-AP/Zajecia/fb296d62fc01fa075388462fd413125d111c7852/docs/CVAP.html" target="_blank">fb296d6</a>
+</td>
+<td>
+95987-AP
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -820,11 +841,6 @@ Dodanie nowych analiz
 <hr>
 </div>
 </div>
-</div>
-<div class="float">
-<img src="data/kot-cv.jpg" style="width:25.0%" fig.align="right"
-alt="Selfie z kotem" />
-<div class="figcaption">Selfie z kotem</div>
 </div>
 <div id="kontakt-nie-dzwoń-po-22" class="section level1">
 <h1>Kontakt (nie dzwoń po 22)</h1>
