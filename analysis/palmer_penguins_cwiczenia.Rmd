@@ -15,11 +15,11 @@ library(kableExtra)
 ```
 
 ```{r, out.width = "25%", fig.align ='right'}
-knitr::include_graphics("~/pingwiny.png", error = FALSE)
+knitr::include_graphics("data/pingwiny.png", error = FALSE)
 ```
 
 ```{r, out.width = "25%", fig.align ='center'}
-knitr::include_graphics("~/dziub.png",error = FALSE)
+knitr::include_graphics("data/dziub.png",error = FALSE)
 ```
 
 ## Załadowanie danych
@@ -63,25 +63,35 @@ Wszystkie możliwości prezentacji danych w formie tabeli można znaleźć na st
 Liczba pingwinów na wyspie:
   
 ```{r}
-
+penguins %>%
+  count(island) %>%
+  kable(col.names = c('Wyspa', 'Liczba')) %>%
+  kable_paper(full_width = FALSE)
 ```
 
 Teraz znajdźmy średnią masę ciała pingwinów:
 ```{r}
-
+penguins %>%
+  summarise(średnia_masa = round(mean(body_mass_g, na.rm = TRUE), 1)) %>%
+  kable()
 ```
 
 Następnie znajdźmy średnią masy ciała w podziale na grupy (gatunki). Użyjemy funkcji 'group_by':
 
 ```{r}
-
+penguins %>%
+  group_by(species) %>%
+  summarise(średnia_masa = round(mean(body_mass_g, na.rm = TRUE), 1)) %>%
+  kable(col.names = c('Gatunek', 'Średnia masa (g)'))
 ```
 
 Co jeśli chcemy wyfiltrować tylko te pingwiny, które mają masę ciała mniejszą od średniej ich gatunku? 
 
-```{r}
 
-```
+  penguins %>%
+  group_by(species) %>%
+  filter(body_mass_g < mean(body_mass_g, na.rm = TRUE)) %>%
+
 
 Dalej, jeśli chcemy ułożyć pingwiny, które mają mniejszą masę ciała niż średnia ich gatunku, w określonej kolejności (użyjemy funkcji 'arrange' z funkcją 'desc'):
 
@@ -114,9 +124,33 @@ Wykres słupkowy i histogram przedstawiają liczbę pingwinów o danej masie cia
 
 ```{r}
 # Histogram masy ciała
+# Histogram masy ciała
+ggplot(penguins, aes(x = body_mass_g)) +
+  geom_histogram(bins = 30, fill = "steelblue", color = "black", alpha = 0.7) +
+  labs(
+    title = "Histogram masy ciała pingwinów",
+    x = "Masa ciała (g)",
+    y = "Liczba pingwinów"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
 
 
 # Wykres słupkowy gatunków
+# Wykres słupkowy gatunków
+penguins %>%
+  group_by(species) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  ggplot(aes(x = species, y = count, fill = species)) +
+  geom_col(color = "black", alpha = 0.8) +
+  labs(
+    title = "Wykres słupkowy gatunków pingwinów",
+    x = "Gatunek",
+    y = "Liczba pingwinów"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none")
 
 ```
 
