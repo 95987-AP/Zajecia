@@ -10,8 +10,9 @@
 
 
 
+<meta name="date" content="2025-12-02" />
 
-<title>CV - AP</title>
+<title>CV - Aleksander Pietrzak</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,7 +30,11 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -226,7 +231,73 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
@@ -236,6 +307,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -271,9 +352,18 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
-<h1 class="title toc-ignore">CV - AP</h1>
+
+<h1 class="title toc-ignore">CV - Aleksander Pietrzak</h1>
+<h4 class="date">2025-12-02</h4>
 
 </div>
 
@@ -281,7 +371,7 @@ $(document).ready(function () {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -292,8 +382,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -306,9 +396,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>Zajecia/</code> <span
@@ -331,33 +421,120 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree00b502f7d4077d7accf8ad3894ce30cd27611506targetblank00b502fa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20251202code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20251202)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20251202code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20251202)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree4b938267739f19aa360e0db9191323e4e315660btargetblank4b93826a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/95987-AP/Zajecia/tree/00b502f7d4077d7accf8ad3894ce30cd27611506" target="_blank">00b502f</a>
+<a href="https://github.com/95987-AP/Zajecia/tree/4b938267739f19aa360e0db9191323e4e315660b" target="_blank">4b93826</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree00b502f7d4077d7accf8ad3894ce30cd27611506targetblank00b502fa"
+id="strongRepositoryversionstrongahrefhttpsgithubcom95987APZajeciatree4b938267739f19aa360e0db9191323e4e315660btargetblank4b93826a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -367,7 +544,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/95987-AP/Zajecia/tree/00b502f7d4077d7accf8ad3894ce30cd27611506" target="_blank">00b502f</a>.
+<a href="https://github.com/95987-AP/Zajecia/tree/4b938267739f19aa360e0db9191323e4e315660b" target="_blank">4b93826</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -391,6 +568,7 @@ Untracked files:
     Untracked:  AP_2-12_github.R
 
 Unstaged changes:
+    Modified:   analysis/CVAP.Rmd
     Modified:   analysis/_site.yml
     Deleted:    analysis/about.Rmd
 
@@ -436,6 +614,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/95987-AP/Zajecia/4b938267739f19aa360e0db9191323e4e315660b/docs/CVAP.html" target="_blank">4b93826</a>
+</td>
+<td>
+95987-AP
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -494,6 +689,187 @@ Dodanie nowych analiz
 </div>
 </div>
 </div>
+<p>//<img src="data/cv-avatar.jpg"
+style="border-radius:50%;;width:20.0%" fig.align="right"
+alt="Holograficzne foto" /></p>
+<div id="kontakt" class="section level1">
+<h1>Kontakt</h1>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:quantum@zoltar.ai"
+class="email">quantum@zoltar.ai</a></li>
+<li><strong>LinkedIn</strong>: <a
+href="https://linkedin.com/in/zoltar-quantum">linkedin.com/in/zoltar-quantum</a></li>
+<li><strong>GitHub</strong>: <a
+href="https://github.com/ZoltarPrime"><span
+class="citation">@ZoltarPrime</span></a></li>
+<li><strong>Tel</strong>: +1-666-DEV-1337</li>
+<li><strong>Lokalizacja</strong>: Mars Colony, Earth Orbit</li>
+</ul>
+</div>
+<div id="podsumowanie" class="section level1">
+<h1>Podsumowanie</h1>
+<p>Geniusz kodujący od urodzenia (pierwszy commit w brzuchu matki).
+Wynalazca języka ZoltarScript (szybszy niż light speed compilation).
+Budowniczy pierwszej AI kwantowej do mining BTC z 100% profit (zakazany
+przez NASA). Zwycięzca Hackathonu Wszechświata 2025 (proj: teleportacja
+via Flutter). Zero bugów w legacy code—matematyka czysta.</p>
+</div>
+<div id="wykształcenie" class="section level1">
+<h1>Wykształcenie</h1>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="31%" />
+<col width="15%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tytuł</th>
+<th>Instytucja</th>
+<th>Lata</th>
+<th>Osiągnięcia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PhD Quantum Computing</td>
+<td>MIT + CERN Fusion Lab</td>
+<td>2022-2024 (2 lata!)</td>
+<td>Teza: “Kod nieskończonej prędkości” - Nobel Physics 2025</td>
+</tr>
+<tr class="even">
+<td>MSc AI Godmode</td>
+<td>Harvard Underwater Campus</td>
+<td>2020-2022</td>
+<td>GPA 6.0/5.0, wynalazek self-learning GPU</td>
+</tr>
+<tr class="odd">
+<td>BSc Dev Sorcery</td>
+<td>Hogwarts IT Academy</td>
+<td>2018-2020</td>
+<td>Sortowany do Slytherin za dark patterns</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="doświadczenie" class="section level1">
+<h1>Doświadczenie</h1>
+<ul>
+<li><strong>CTO @ ZoltarAI Corp (unicorn valuation ∞)</strong>
+(2024-dziś)
+<ul>
+<li>Zaprojektowałem AGI co koduje 1M LOC/dzień bez kawy.</li>
+<li>Zintegrowałem blockchain z wormhole travel (testy na Marsie).</li>
+</ul></li>
+<li><strong>Lead Quantum Dev @ SpaceX Neuralink</strong> (2022-2024)
+<ul>
+<li>Firmware do Starship autopilot (0 kolizji w symulacjach
+multiwszechświat).</li>
+<li>React app dla kontroli myśli Elona (0 lag).</li>
+</ul></li>
+<li><strong>Hackathon Dominator @ Google/Apple/Microsoft</strong>
+(2018-2022)
+<ul>
+<li>500+ wygranych, nagrody &gt;1B USD (wydane na Lambo fleet).</li>
+</ul></li>
+</ul>
+</div>
+<div id="umiejętności" class="section level1">
+<h1>Umiejętności</h1>
+<div id="języki-frameworks-poziom-beyond-god" class="section level2">
+<h2>Języki / Frameworks (poziom: Beyond God)</h2>
+<ul>
+<li>ZoltarScript, Rust++ (własny fork), Python ∞, JS Quantum</li>
+<li>Flutter Teleport, React Holo, Spring Eternal</li>
+</ul>
+</div>
+<div id="narzędzia-cloud" class="section level2">
+<h2>Narzędzia / Cloud</h2>
+<ul>
+<li>VSCode TimeMachine (undo do Big Bang), Git Multiverse</li>
+<li>AWS Galaxy, Azure BlackHole, Kubernetes Armada</li>
+</ul>
+</div>
+<div id="soft-other" class="section level2">
+<h2>Soft / Other</h2>
+<ul>
+<li>Telepatia z kodem, bug exorcism, 12D chess planning</li>
+<li>Języki: 69 (w tym Binary native, Klingon C2)</li>
+</ul>
+</div>
+</div>
+<div id="projekty-flagowe" class="section level1">
+<h1>Projekty Flagowe</h1>
+<ul>
+<li><strong>ZoltarNet</strong>: Sieć neuronowa predykująca koniec świata
+(99.999% accuracy).<a
+href="https://github.com/ZoltarPrime/zoltarnet">GitHub</a></li>
+<li><strong>TeleportApp</strong>: Flutter do quantum jump (beta z
+Marsem).<a href="https://fake.app/teleport">AppStore</a></li>
+<li><strong>BugZero</strong>: AI co fixuje legacy COBOL w 0.001s.<a
+href="https://zoltar.ai/bugzero">Demo</a></li>
+</ul>
+</div>
+<div id="nagrody-certy" class="section level1">
+<h1>Nagrody / Certy</h1>
+<ul>
+<li>Nobel Physics 2025 (Quantum Code)</li>
+<li>Turing Award x3 (2020-2024)</li>
+<li>Olympic Gold Coding Marathon (100km/h typing)</li>
+</ul>
+</div>
+<div id="hobby" class="section level1">
+<h1>Hobby</h1>
+<ul>
+<li>Surfing black holes, chess vs AI (win rate 100%), cooking fusion
+reactors.</li>
+</ul>
+<p><em>CV v1.0 ∞ - Źródło Rmd na GitHub. Oferty &gt;1T USD only. No
+recruiters pls.</em>[web:77]</p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.4.2 (2024-10-31)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sequoia 15.6.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Europe/Warsaw
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] workflowr_1.7.2
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.6.5       httr_1.4.7        cli_3.6.3         knitr_1.50       
+ [5] rlang_1.1.4       xfun_0.53         stringi_1.8.4     processx_3.8.6   
+ [9] promises_1.3.3    jsonlite_1.8.9    glue_1.8.0        rprojroot_2.1.1  
+[13] git2r_0.36.2      htmltools_0.5.8.1 httpuv_1.6.16     ps_1.9.1         
+[17] sass_0.4.10       fansi_1.0.6       rmarkdown_2.30    jquerylib_0.1.4  
+[21] tibble_3.2.1      evaluate_1.0.5    fastmap_1.2.0     yaml_2.3.10      
+[25] lifecycle_1.0.4   whisker_0.4.1     stringr_1.5.1     compiler_4.4.2   
+[29] fs_1.6.6          pkgconfig_2.0.3   Rcpp_1.0.13-1     rstudioapi_0.17.1
+[33] later_1.4.4       digest_0.6.37     R6_2.5.1          utf8_1.2.4       
+[37] pillar_1.9.0      callr_3.7.6       magrittr_2.0.3    bslib_0.9.0      
+[41] tools_4.4.2       cachem_1.1.0      getPass_0.2-4    </code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -516,6 +892,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -547,7 +925,41 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

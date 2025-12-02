@@ -1,10 +1,67 @@
 ---
-title: "CV - AP"
+title: "CV - Aleksander Pietrzak"
 output:
   workflowr::wflow_html:
-    toc: false
-editor_options:
-  chunk_output_type: console
+    toc: true
+    toc_float: true
+    code_folding: hide
+date: "`r Sys.Date()`"
 ---
 
+//![Holograficzne foto](data/cv-avatar.jpg){width=20% fig.align="right" style="border-radius:50%;"}
+
+# Kontakt
+- **Email**: quantum@zoltar.ai
+- **LinkedIn**: [linkedin.com/in/zoltar-quantum](https://linkedin.com/in/zoltar-quantum)
+- **GitHub**: [@ZoltarPrime](https://github.com/ZoltarPrime)
+- **Tel**: +1-666-DEV-1337
+- **Lokalizacja**: Mars Colony, Earth Orbit
+
+# Podsumowanie
+Geniusz kodujący od urodzenia (pierwszy commit w brzuchu matki). Wynalazca języka ZoltarScript (szybszy niż light speed compilation). Budowniczy pierwszej AI kwantowej do mining BTC z 100% profit (zakazany przez NASA). Zwycięzca Hackathonu Wszechświata 2025 (proj: teleportacja via Flutter). Zero bugów w legacy code—matematyka czysta.
+
+# Wykształcenie
+| Tytuł | Instytucja | Lata | Osiągnięcia |
+|-------|------------|------|-------------|
+| PhD Quantum Computing | MIT + CERN Fusion Lab | 2022-2024 (2 lata!) | Teza: "Kod nieskończonej prędkości" - Nobel Physics 2025 |
+| MSc AI Godmode | Harvard Underwater Campus | 2020-2022 | GPA 6.0/5.0, wynalazek self-learning GPU |
+| BSc Dev Sorcery | Hogwarts IT Academy | 2018-2020 | Sortowany do Slytherin za dark patterns |
+
+# Doświadczenie
+- **CTO @ ZoltarAI Corp (unicorn valuation ∞)** (2024-dziś)
+  - Zaprojektowałem AGI co koduje 1M LOC/dzień bez kawy.
+  - Zintegrowałem blockchain z wormhole travel (testy na Marsie).
+- **Lead Quantum Dev @ SpaceX Neuralink** (2022-2024)
+  - Firmware do Starship autopilot (0 kolizji w symulacjach multiwszechświat).
+  - React app dla kontroli myśli Elona (0 lag).
+- **Hackathon Dominator @ Google/Apple/Microsoft** (2018-2022)
+  - 500+ wygranych, nagrody >1B USD (wydane na Lambo fleet).
+
+# Umiejętności
+## Języki / Frameworks (poziom: Beyond God)
+- ZoltarScript, Rust++ (własny fork), Python ∞, JS Quantum
+- Flutter Teleport, React Holo, Spring Eternal
+
+## Narzędzia / Cloud
+- VSCode TimeMachine (undo do Big Bang), Git Multiverse
+- AWS Galaxy, Azure BlackHole, Kubernetes Armada
+
+## Soft / Other
+- Telepatia z kodem, bug exorcism, 12D chess planning
+- Języki: 69 (w tym Binary native, Klingon C2)
+
+# Projekty Flagowe
+- **ZoltarNet**: Sieć neuronowa predykująca koniec świata (99.999% accuracy).[GitHub](https://github.com/ZoltarPrime/zoltarnet)
+- **TeleportApp**: Flutter do quantum jump (beta z Marsem).[AppStore](https://fake.app/teleport)
+- **BugZero**: AI co fixuje legacy COBOL w 0.001s.[Demo](https://zoltar.ai/bugzero)
+
+# Nagrody / Certy
+- Nobel Physics 2025 (Quantum Code)
+- Turing Award x3 (2020-2024)
+- Olympic Gold Coding Marathon (100km/h typing)
+
+# Hobby
+- Surfing black holes, chess vs AI (win rate 100%), cooking fusion reactors.
+
+*CV v1.0 ∞ - Źródło Rmd na GitHub. Oferty >1T USD only. No recruiters pls.*[web:77]
 
