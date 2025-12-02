@@ -1,19 +1,24 @@
 ---
 title: "Palmer Penguins"
-author: 
-output: html_document
+author: "Aleksander Pietrzak"
+output:
+  workflowr::wflow_html:
+    code_folding: hide
 date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.path = "figs/")
+library(knitr)
+library(kableExtra)
+
 ```
 
-```{r, out.width = "25%", fig.align ='right'}
+```{r, out.width = "25%", fig.align ='right', error = FALSE}
 knitr::include_graphics("data/pingwiny.png")
 ```
 
-```{r, out.width = "25%", fig.align ='center'}
+```{r, out.width = "25%", fig.align ='center', error = FALSE}
 knitr::include_graphics("data/dziub.png")
 ```
 
@@ -22,7 +27,8 @@ knitr::include_graphics("data/dziub.png")
 Najpierw musimy załadować pakiet, który zawiera interesujące nas dane i dowiedzieć się, co te dane przedstawiają.
 
 ```{r, eval=FALSE}
-install.packages("palmerpenguins")
+install.packages(c("palmerpenguins", "dplyr", "ggplot2", "kableExtra"))
+
 ```
 
 
